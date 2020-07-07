@@ -15,7 +15,7 @@ function cost() {
         }
         document.getElementById("price").style.display = "block";
         document.getElementById("price").innerHTML = (Math.round((cost + Number.EPSILON) * 100) / 100) + "€";
-    } else if ((km <= 0 && age <= 0) || ((km / 1) != km && (age / 1) != age)) {
+    } else if ((km <= 0 && age <= 0) || ((km / 1) != km && (age / 1) != age) || ((km / 1) != km && (age / 1) == 0) || ((km / 1) == 0 && (age / 1) != age)) {
         document.getElementById("km-error").style.display = "block";
         document.getElementById("km-error").innerHTML = ("Inserire un numero positivo");
         document.getElementById("age-error").style.display = "block";
